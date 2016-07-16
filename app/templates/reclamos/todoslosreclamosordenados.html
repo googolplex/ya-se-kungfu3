@@ -1,0 +1,17 @@
+{% extends "layouts/default.html" %}
+{% import "scaffolding/macros.html" as scaffold with context %}
+{% import 'macros/search.html' as search with context %}
+
+{% block layout_content %}
+    {{search.filter(uri())}}
+    {{search.info()}}
+    {% for reclamo in reclamos %}
+    <div class="media">
+        <div class="media-body">
+            <h4 class="media-heading">{{reclamo.titulo}}</h4>
+            <h6 class="media-heading">By {{reclamo.created_by}} on {{scaffold.print(reclamo.created)}}</h6>
+            <p>{{reclamo.content}}</p>
+        </div>
+    </div>
+    {% endfor %}
+{% endblock %}

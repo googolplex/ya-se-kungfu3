@@ -1,0 +1,22 @@
+indexes:
+
+- kind: Reclamo
+  ancestor: no
+  properties:
+  - name: titulo
+  - name: contenido
+    direction: asc
+
+- kind: Reclamo
+  ancestor: no
+  properties:
+  - name: titulo
+  - name: created_by
+    direction: asc
+
+- kind: Reclamo
+  ancestor: no
+  properties:
+  - name: created_by
+  - name: titulo
+    direction: asc

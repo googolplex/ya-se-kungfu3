@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+    <title>{{scaffolding.title}}</title>
+
+    <link rel="stylesheet" type="text/css" href="/ferris/css/bootstrap.min.css">
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/ferris/js/bootstrap.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar navbar-default" role="navigation navbar-default" role="navigation">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Reclamos</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a href="{{uri('user:reclamos:list')}}">All</a></li>
+                <li><a href="{{uri('user:reclamos:add')}}">Nuevo</a></li>
+                <li><a href="{{uri('reclamos:todoslosreclamosordenados')}}">TodosOrdenados</a></li>
+
+            </ul>
+        </nav>
+        {% block layout_content %}
+        {% endblock %}
+    </div>
+</body>
+</html>
